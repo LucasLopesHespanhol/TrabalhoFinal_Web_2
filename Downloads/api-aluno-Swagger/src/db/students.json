@@ -1,0 +1,14 @@
+[
+  {
+    "id": "agt0b6d0-a69b-4938-b116-f2e8e0d08542",
+    "nome": "Andre Faria Ruaro",
+    "age": 32,
+    "parents": [
+      "Carlos Ruaro",
+      "Maria Faria"
+    ],
+    "phone_number": "(11) 98765-4321",
+    "special_needs": "Dificuldade auditiva",
+    "status": "On"
+  }
+]
