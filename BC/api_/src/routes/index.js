@@ -1,8 +1,24 @@
-const express = require('express')
-const router = express.Router()
-const users = require('./users')
+const express = require('express');
+const router = express.Router();
 
-router.use(express.json())
-router.use('/users', users)
+// Importando os arquivos de rotas para os modelos
+const compromissos = require('./appointments');  // Rotas para compromissos
+const eventos = require('./events');            // Rotas para eventos
+const profissionais = require('./professionals'); // Rotas para profissionais
+const estudantes = require('./students');        // Rotas para estudantes
+const teachers = require('./teachers');       // Alterado para 'teachers'
+const users = require('./users');
 
-module.exports = router
+// Middleware para processar JSON
+router.use(express.json());
+
+// Definindo as rotas para cada recurso
+router.use('/compromissos', compromissos);
+router.use('/eventos', eventos);
+router.use('/profissionais', profissionais);
+router.use('/estudantes', estudantes);
+router.use('/teachers', teachers);  // Mantido como '/teachers'
+router.use('/users', users);
+
+// Exportando o roteador
+module.exports = router;

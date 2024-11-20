@@ -67,7 +67,6 @@ export default function readuser() {
       </Head>
       <div>
         <NavAdmin />
-        <MenuUsers />
         { 
           message.status==="" ? "" : 
           message.status==="ok" ? "" : 
